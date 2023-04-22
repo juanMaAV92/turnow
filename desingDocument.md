@@ -1,3 +1,9 @@
+# Turnow
+
+* __Resumen__
+
+...
+
 * __Objetivo__
 
 Diseñar una aplicación de gestión de turnos genérica para facilitar y optimizar la atención y/o prestacion de servicios en distintos tipos de organizaciones o empresas, permitiendo una mejor organización, control y atención a los usuarios o clientes.
@@ -18,23 +24,30 @@ La aplicación permitirá la asignación de turnos en forma presencial en establ
 
 Se podrá configurar y asignar distintas categorias de turnos dependiendo del tipo de servicio a solicitar o de la prioridad (dada por la organización).
 
-La aplicación debe contar con una pantalla para la solicitud del turno por parte del usuario final; una pantalla para visualizar el turno actual y el modulo de atencíon a donde se debe dirigir el usuario; una pantalla para la administraciónde turnos; una pantalla para atender un turno en un modulo especifico. 
+La aplicación debe contar con una pantalla para la solicitud del turno por parte del usuario final; una pantalla para visualizar el turno actual y el modulo de atencíon a donde se debe dirigir el usuario; una pantalla para la administración de turnos; una pantalla para atender un turno en un modulo especifico. 
 
 
-* Solución propuesta y alternativa
+* __Solución propuesta y alternativa__
 
 
 * __Casos de uso a soportar__
 
   * Usuario final:
+      - El usuario podrá solicitar un turno para ser atendido segun la clasificación de tipo de usuario.
+      - El usuario obtendrá un mensaje de error en caso de que su registro no se haya realizado con exito y podrá intentarlo nuevamente.
+      - El usuario podrá visualizar su nombre en la pantalla de espera para saber el momento en que podrá pasar a ser atendido.
   
   * Usuario modulo:
   
   * Usuario Administrador:
+      - (El administrador deberá iniciar sesion para poder usar el sistema)
+      - El administrador podrá crear categorias para los tipos de usuario segun su modelo de atención.
+      - El administrador podrá reiniciar el conteo de turnos si es necesario.
+      - El administrador podrá eliminar los registros de usuarios si lo requiere.
   
   * Usuario Organización:
   
-  
+* __Out of Scope (casos de uso No Soportados)__
 
 * __Arquitectura__
 
