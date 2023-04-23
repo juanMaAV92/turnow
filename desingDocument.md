@@ -60,10 +60,13 @@ La aplicación debe contar con una pantalla para la solicitud del turno por part
   * Base de datos: PostgreSQL, ORM: SQLAlchemist
   * Modelo de datos:
   	- Diseño de entidades:
-  		
-
   	
 
+	![Diagrama fisico cardinalidad](/img/Cardinalidad.drawio.png)
+ 
+ 
+ 
+  	
 
 * __Limites__
 	- La base de datos guardará un numero limitado de registros en el tiempo.
