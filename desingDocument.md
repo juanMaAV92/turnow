@@ -33,21 +33,23 @@ La aplicación debe contar con una pantalla para la solicitud del turno por part
 * __Casos de uso a soportar__
 
   * Usuario final:
-      - El usuario podrá solicitar un turno para ser atendido segun la clasificación de tipo de usuario.
-      - El usuario obtendrá un mensaje de error en caso de que su registro no se haya realizado con exito y podrá intentarlo nuevamente.
-      - El usuario podrá visualizar su nombre en la pantalla de espera para saber el momento en que podrá pasar a ser atendido.
+      - El usuario solicita un turno para ser atendido segun la clasificación de tipo de usuario.
+      - El usuario visualiza su nombre en la pantalla de espera para saber el momento en que podrá pasar a ser atendido.
+      - El usuario obtiene un mensaje de error en caso de que su registro no se haya realizado con exito y podrá intentarlo nuevamente.
+      - El usuario obtiene un mensaje de advertencia cuando ya se haya llegado al límite de turnos en el día.
   
   * Usuario modulo:
   
   * Usuario Administrador:
-      - (El administrador deberá iniciar sesion para poder usar el sistema)
-      - El administrador podrá crear categorias para los tipos de usuario segun su modelo de atención.
-      - El administrador podrá reiniciar el conteo de turnos si es necesario.
-      - El administrador podrá eliminar los registros de usuarios si lo requiere.
+      - El administrador crea categorias para los tipos de usuario segun su modelo de atención.
+      - El administrador limita el numero de turnos a otorgar.
+      - El administrador reinicia el conteo de turnos si es necesario.
+      - El administrador elimina los registros de usuarios si lo requiere.
   
   * Usuario Organización:
   
 * __Out of Scope (casos de uso No Soportados)__
+  - Como usuario me gustaría tomar un turno estando fuera del establecimiento fisico
 
 * __Arquitectura__
 
@@ -55,9 +57,15 @@ La aplicación debe contar con una pantalla para la solicitud del turno por part
   * Tipo de aplicación: WEB
     * Backend: Python (DJango)
     * Frontend: HTML + JavaScript + CSS; servidos por DJango como estaticos
-  * Base de datos: Postgres, ORM: SQLAlchemist 
+  * Base de datos: PostgreSQL, ORM: SQLAlchemist
+  * Modelo de datos:
+  	- Diseño de entidades:
+  		
+
+  	
 
 
-* Limites 
-
+* __Limites__
+	- La base de datos guardará un numero limitado de registros en el tiempo.
+	- Solo podrá registrarse un usuario a la vez
 
