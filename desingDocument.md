@@ -39,6 +39,9 @@ La aplicación debe contar con una pantalla para la solicitud del turno por part
       - El usuario obtiene un mensaje de advertencia cuando ya se haya llegado al límite de turnos en el día.
   
   * Usuario modulo:
+      - El usuario módulo puede ver en una pantalla los turnos actuales que se deben atender en ese módulo, y marcarlos como atendidos una vez que hayan sido atendidos.
+      - El usuario módulo también puede reasignar un turno a otro módulo si es necesario, por ejemplo, si el servicio que el usuario necesita no se puede proporcionar en ese módulo específico.
+
   
   * Usuario Administrador:
       - El administrador crea categorias para los tipos de usuario segun su modelo de atención.
@@ -47,6 +50,9 @@ La aplicación debe contar con una pantalla para la solicitud del turno por part
       - El administrador elimina los registros de usuarios si lo requiere.
   
   * Usuario Organización:
+      - El usuario organización puede configurar los distintos módulos de atención y asignarles los distintos tipos de servicio.
+      - También puede configurar los horarios de atención para cada módulo y categoría de turnos, y establecer días festivos o de cierre.
+      - Además, el usuario organización puede ver estadísticas y generar reportes sobre la cantidad de turnos solicitados y atendidos, el tiempo promedio de espera, etc. Esto puede ayudar a la organización a optimizar su proceso de atención al cliente y mejorar la eficiencia en la gestión de turnos.
   
 * __Out of Scope (casos de uso No Soportados)__
   - Como usuario me gustaría tomar un turno estando fuera del establecimiento fisico
