@@ -1,14 +1,15 @@
 # Turnow
 
-* __Resumen__
+## __Resumen__
 
 ...
 
-* __Objetivo__
+## Objetivo
 
 Diseñar una aplicación de gestión de turnos genérica para facilitar y optimizar la atención y/o prestacion de servicios en distintos tipos de organizaciones o empresas, permitiendo una mejor organización, control y atención a los usuarios o clientes.
 
-* __Espectativas__
+***
+## Espectativas
 
 Permitir un mayor control: La aplicación proporcionará una mejor visibilidad y control de la programación de turnos, lo que puede ayudar a las organizaciones a planificar mejor sus recursos y optimizar la atención.
 
@@ -18,63 +19,38 @@ Ofrecer una experiencia de usuario mejorada: Una aplicación bien diseñada pued
 
 Incrementar la satisfacción de los usuarios: Al mejorar la eficiencia en la atención y que los turnos se asignen de una manera más fácil y rápida, puede aumentar la satisfacción de los usuarios finales.
 
-* __Alcance__
+***
+## Alcance
 
-La aplicación permitirá la asignación de turnos en forma presencial en establecimientos de atención al usuario:  como Bancos, centros de salud, laboratorios clinicos, etc.
+**Gestión de turnos**: La aplicación debe permitir a los usuarios obtener un turno de forma presencial  y también permitir a los empleados o responsables de la organización gestionar los turnos, modificarlos o cancelarlos si es necesario.
 
-Se podrá configurar y asignar distintas categorias de turnos dependiendo del tipo de servicio a solicitar o de la prioridad (dada por la organización).
+**Notificaciones**: La aplicación debe enviar notificaciones en un pantalla a los cliente.
 
-La aplicación debe contar con una pantalla para la solicitud del turno por parte del usuario final; una pantalla para visualizar el turno actual y el modulo de atencíon a donde se debe dirigir el usuario; una pantalla para la administración de turnos; una pantalla para atender un turno en un modulo especifico. 
+**Personalización**: La aplicación debe permitir a cada organización personalizar su configuración, por ejemplo, definir los horarios de atención, los servicios disponibles, la cantidad de turnos que pueden emitirse por día, cantidad de modulos.
 
+**Monitoreo**: La aplicación debe permitir a los empleados o responsables de la organización monitorear el estado de los turnos, para poder anticiparse a posibles problemas y mejorar la atención al cliente.
 
-* __Solución propuesta y alternativa__
+**Análisis de datos**: La aplicación debe permitir recolectar y analizar datos sobre la atención al cliente, como por ejemplo, el tiempo promedio de espera, el número de turnos atendidos por día, la satisfacción del cliente, entre otros.
 
+**Seguridad**: Es importante garantizar la seguridad de los datos personales de los usuarios y la información sensible de la organización. Se deben implementar medidas de seguridad, como la autenticación de usuarios y la encriptación de datos, para evitar posibles amenazas de seguridad.
 
-* __Casos de uso a soportar__
+**Interfaz de usuario**: La interfaz de usuario debe ser intuitiva, fácil de usar y atractiva visualmente. Los usuarios deben poder entender rápidamente cómo usar la aplicación y realizar acciones sin problemas.
+***
 
-  * Usuario final:
-      - El usuario solicita un turno para ser atendido segun la clasificación de tipo de usuario.
-      - El usuario visualiza su nombre en la pantalla de espera para saber el momento en que podrá pasar a ser atendido.
-      - El usuario obtiene un mensaje de error en caso de que su registro no se haya realizado con exito y podrá intentarlo nuevamente.
-      - El usuario obtiene un mensaje de advertencia cuando ya se haya llegado al límite de turnos en el día.
-  
-  * Usuario modulo:
-      - El usuario módulo puede ver en una pantalla los turnos actuales que se deben atender en ese módulo, y marcarlos como atendidos una vez que hayan sido atendidos.
-      - El usuario módulo también puede reasignar un turno a otro módulo si es necesario, por ejemplo, si el servicio que el usuario necesita no se puede proporcionar en ese módulo específico.
+## Solución propuesta y alternativa
 
-  
-  * Usuario Administrador:
-      - El administrador crea categorias para los tipos de usuario segun su modelo de atención.
-      - El administrador limita el numero de turnos a otorgar.
-      - El administrador reinicia el conteo de turnos si es necesario.
-      - El administrador elimina los registros de usuarios si lo requiere.
-  
-  * Usuario Organización:
-      - El usuario organización puede configurar los distintos módulos de atención y asignarles los distintos tipos de servicio.
-      - También puede configurar los horarios de atención para cada módulo y categoría de turnos, y establecer días festivos o de cierre.
-      - Además, el usuario organización puede ver estadísticas y generar reportes sobre la cantidad de turnos solicitados y atendidos, el tiempo promedio de espera, etc. Esto puede ayudar a la organización a optimizar su proceso de atención al cliente y mejorar la eficiencia en la gestión de turnos.
-  
-* __Out of Scope (casos de uso No Soportados)__
-  - Como usuario me gustaría tomar un turno estando fuera del establecimiento fisico
+Para lograr esto, es necesario desarrollar una interfaz de usuario intuitiva y fácil de usar para que los usuarios puedan solicitar su turno y recibir notificaciones sobre el estado de su turno. Además, se debe desarrollar una pantalla para la visualización de los turnos actuales y la dirección del módulo de atención correspondiente.
 
-* __Arquitectura__
+Por otro lado, se debe desarrollar una pantalla para la administración de turnos, donde los empleados o responsables de la organización puedan gestionar los turnos, modificarlos o cancelarlos si es necesario. También es importante contar con una pantalla para la atención de los turnos en el módulo específico correspondiente.
 
-  * SO: Linux o Windows
-  * Tipo de aplicación: WEB
-    * Backend: Python (DJango)
-    * Frontend: HTML + JavaScript + CSS; servidos por DJango como estaticos
-  * Base de datos: PostgreSQL, ORM: SQLAlchemist
-  * Modelo de datos:
-  	- Diseño de entidades:
-  	
-
-	![Diagrama fisico cardinalidad](/img/Cardinalidad.drawio.png)
+En cuanto a la categorización de los turnos, se debe implementar un sistema que permita asignar distintas categorías de turnos dependiendo del tipo de servicio a solicitar o de la prioridad dada por la organización. De esta manera, se puede mejorar la eficiencia en la atención de los usuarios y reducir el tiempo de espera.
  
- 
- 
-  	
+***
+   	
 
-* __Limites__
-	- La base de datos guardará un numero limitado de registros en el tiempo.
-	- Solo podrá registrarse un usuario a la vez
+## Limites
+
+- La base de datos guardará un numero limitado de registros en el tiempo.
+- Solo podrá registrarse un usuario a la vez.
+- Los reportes seran generados de manera diaria, semanal y mensual. Sin embargo solo seran almacenados por el periodo de un mes, ya que seran enviados al correo asignado como rol de gerencia
 
